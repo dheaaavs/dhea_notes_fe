@@ -11,7 +11,7 @@ const AddCatatan = () => {
   const saveCatatan = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/add-catatan", {
+      await axios.post("https://notes-be-dhea-103949415038.us-central1.run.app/add-catatan", {
         penulis,
         judul,
         isi,
