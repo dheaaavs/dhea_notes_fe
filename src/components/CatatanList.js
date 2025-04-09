@@ -10,13 +10,13 @@ const CatatanList = () => {
   }, []);
 
   const getcatatan = async () => {
-    const response = await axios.get("http://localhost:5000/catatan");
+    const response = await axios.get("https://notes-be-dhea-103949415038.us-central1.run.app/catatan");
     setCatatan(response.data);
   };
 
   const deleteCatatan = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/catatan/${id}`);
+      await axios.delete(`https://notes-be-dhea-103949415038.us-central1.run.app/catatan/${id}`);
       getcatatan();
     } catch (error) {
       console.log(error);
