@@ -16,7 +16,7 @@ const EditCatatan = () => {
   const updateCatatan = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/catatan/${id}`, {
+      await axios.put(`https://notes-be-dhea-103949415038.us-central1.run.app/catatan/${id}`, {
         penulis,
         judul,
         isi,
@@ -28,7 +28,7 @@ const EditCatatan = () => {
   };
 
   const getCatatanById = async () => {
-    const response = await axios.get(`http://localhost:5000/catatan/${id}`);
+    const response = await axios.get(`https://notes-be-dhea-103949415038.us-central1.run.app/catatan/${id}`);
     setPenulis(response.data.penulis);
     setJudul(response.data.judul);
     setIsi(response.data.isi);
